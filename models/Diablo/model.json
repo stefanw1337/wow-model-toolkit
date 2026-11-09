@@ -1,0 +1,173 @@
+{
+  "mode": "animated",
+  "source": "Diablo.blend",
+  "meshes": [
+    "A_normal_mat"
+  ],
+  "armature": "Armature",
+  "fps": 30,
+  "reference_frame": 1,
+  "source_frame_offset": 0,
+  "frame_end_exclusive": false,
+  "rotation_z_degrees": 0,
+  "scale": 0.16,
+  "collision": {
+    "mode": "none"
+  },
+  "texture": "diffuse.png",
+  "model_path": "Creature/Custom/D3Diablo/D3Diablo.m2",
+  "texture_path": "Creature/Custom/D3Diablo/D3Diablo.blp",
+  "material": {
+    "blend": "opaque",
+    "two_sided": true
+  },
+  "patch_name": "Diablo-assets.MPQ",
+  "animations": [
+    {
+      "name": "Stand",
+      "id": 0,
+      "loop": true,
+      "ranges": [
+        [
+          1,
+          61
+        ]
+      ]
+    },
+    {
+      "name": "Death",
+      "id": 1,
+      "loop": false,
+      "ground_clamp_z": -0.03,
+      "ranges": [
+        [
+          64,
+          164
+        ]
+      ]
+    },
+    {
+      "name": "Walk",
+      "id": 4,
+      "loop": true,
+      "movespeed": 2.5,
+      "ranges": [
+        [
+          167,
+          227
+        ]
+      ]
+    },
+    {
+      "name": "Run",
+      "id": 5,
+      "loop": true,
+      "movespeed": 7,
+      "ranges": [
+        [
+          230,
+          254
+        ]
+      ]
+    },
+    {
+      "name": "Dead",
+      "id": 6,
+      "loop": true,
+      "hold": true,
+      "ground_clamp_z": -0.03,
+      "ranges": [
+        [
+          257,
+          258
+        ]
+      ]
+    },
+    {
+      "name": "CombatWound",
+      "id": 9,
+      "loop": false,
+      "ranges": [
+        [
+          261,
+          284
+        ]
+      ]
+    },
+    {
+      "name": "Stun",
+      "id": 14,
+      "loop": true,
+      "ranges": [
+        [
+          287,
+          347
+        ]
+      ]
+    },
+    {
+      "name": "AttackUnarmed",
+      "id": 16,
+      "loop": false,
+      "ranges": [
+        [
+          350,
+          390
+        ]
+      ]
+    },
+    {
+      "name": "Attack1H",
+      "id": 17,
+      "loop": false,
+      "ranges": [
+        [
+          350,
+          390
+        ]
+      ]
+    },
+    {
+      "name": "ReadyUnarmed",
+      "id": 25,
+      "loop": true,
+      "ranges": [
+        [
+          1,
+          61
+        ]
+      ]
+    },
+    {
+      "name": "Ready1H",
+      "id": 26,
+      "loop": true,
+      "ranges": [
+        [
+          1,
+          61
+        ]
+      ]
+    },
+    {
+      "name": "EmoteTalk",
+      "id": 60,
+      "loop": false,
+      "ranges": [
+        [
+          393,
+          463
+        ]
+      ]
+    }
+  ],
+  "animation_transitions": [
+    {
+      "id": 1,
+      "from_id": 1,
+      "to_id": 6,
+      "duration_ms": 1800,
+      "ground_z": -0.03
+    }
+  ]
+}

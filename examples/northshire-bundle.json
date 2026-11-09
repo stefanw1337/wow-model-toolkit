@@ -1,0 +1,169 @@
+{
+  "client": "C:/path/to/WoW-3.3.5a",
+  "locale": "enGB",
+  "patch_name": "patch-enGB-Z.MPQ",
+  "merge_patches": [
+    "patch-enGB-Z.MPQ",
+    "patch-enGB-ZZ.MPQ"
+  ],
+  "models": [
+    {
+      "build": "builds/butcher-001",
+      "display_ids": [
+        2073
+      ],
+      "display_scale": 1.6
+    },
+    {
+      "build": "builds/diablo-004",
+      "display_ids": [
+        31048,
+        31049
+      ],
+      "display_scale": 1.8
+    }
+  ],
+  "audio": "builds/d3-creature-wav",
+  "sounds": [
+    {
+      "name": "Zombie",
+      "model": "Creature/Custom/D3Zombie/D3Zombie.m2",
+      "groups": [
+        {
+          "name": "Attack",
+          "pattern": "^Mon_Zombie_Attack_\\d+$",
+          "times": {
+            "16": [
+              200
+            ],
+            "17": [
+              200
+            ]
+          }
+        },
+        {
+          "name": "Wound",
+          "pattern": "^Mon_Zombie_GetHit_",
+          "times": {
+            "9": [
+              20
+            ]
+          }
+        },
+        {
+          "name": "Death",
+          "pattern": "^Mon_Zombie_Death_",
+          "times": {
+            "1": [
+              20
+            ]
+          }
+        },
+        {
+          "name": "Emerge",
+          "pattern": "^ZombieRaise\\d$",
+          "times": {
+            "127": [
+              100
+            ],
+            "145": [
+              100
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Butcher",
+      "model": "Creature/Custom/D3Butcher/D3Butcher.m2",
+      "groups": [
+        {
+          "name": "Attack",
+          "pattern": "^Mon_Butcher_Breath_Grunt_",
+          "times": {
+            "16": [
+              200
+            ],
+            "17": [
+              200
+            ]
+          }
+        },
+        {
+          "name": "Wound",
+          "pattern": "^Mon_Butcher_Get_Hit_",
+          "times": {
+            "9": [
+              20
+            ]
+          }
+        },
+        {
+          "name": "Death",
+          "pattern": "^Mon_Butcher_Death_\\d+$",
+          "times": {
+            "1": [
+              20
+            ]
+          }
+        },
+        {
+          "name": "IntroVoice",
+          "pattern": "^\\d+Butcher$",
+          "times": {
+            "127": [
+              100
+            ],
+            "145": [
+              100
+            ]
+          },
+          "bank": "D_Butcher_Taunts"
+        }
+      ]
+    },
+    {
+      "name": "Diablo",
+      "model": "Creature/Custom/D3Diablo/D3Diablo.m2",
+      "groups": [
+        {
+          "name": "Attack",
+          "pattern": "^Diablo_Attack_WIP_v03 ",
+          "times": {
+            "16": [
+              200
+            ],
+            "17": [
+              200
+            ]
+          }
+        },
+        {
+          "name": "Wound",
+          "pattern": "^Diablo_GetHit_v01_",
+          "times": {
+            "9": [
+              20
+            ]
+          }
+        },
+        {
+          "name": "Death",
+          "pattern": "^Diablo_Mortal_Wounded_Scream",
+          "times": {
+            "1": [
+              20
+            ]
+          }
+        },
+        {
+          "name": "Dialogue",
+          "pattern": "^000Diablo$",
+          "times": {},
+          "bank": "D_DiabloFight_Diablo_BossIntro"
+        }
+      ]
+    }
+  ],
+  "install_name": "patch-enGB-Z.MPQ"
+}

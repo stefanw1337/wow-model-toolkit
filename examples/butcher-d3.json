@@ -1,0 +1,129 @@
+{
+  "name": "Butcher",
+  "data_root": "C:/path/to/Diablo III/Data/data/Work/Base",
+  "appearance": "Butcher.app",
+  "scale": 0.2,
+  "rotation_z_degrees": 0,
+  "meshes": [
+    {
+      "mesh": "A_normal_mat",
+      "texture": "butcher_diff.tex",
+      "atlas_rect": [
+        0,
+        0,
+        0.5,
+        1
+      ]
+    },
+    {
+      "mesh": "A_armor_mat",
+      "texture": "butcher_armor_diff.tex",
+      "atlas_rect": [
+        0.5,
+        0,
+        0.5,
+        1
+      ]
+    },
+    {
+      "mesh": "A_cloth_mat",
+      "texture": "butcher_diff.tex",
+      "atlas_rect": [
+        0,
+        0,
+        0.5,
+        1
+      ]
+    }
+  ],
+  "animations": [
+    {
+      "name": "Stand",
+      "id": 0,
+      "file": "Butcher_BreakFree_idle_01.ani",
+      "loop": true
+    },
+    {
+      "name": "Death",
+      "id": 1,
+      "file": "Butcher_BreakFree_death_01.ani",
+      "loop": false
+    },
+    {
+      "name": "Walk",
+      "id": 4,
+      "file": "Butcher_BreakFree_walk_01.ani",
+      "loop": true,
+      "movespeed": 2.5
+    },
+    {
+      "name": "Run",
+      "id": 5,
+      "file": "Butcher_BreakFree_run_01.ani",
+      "loop": true,
+      "movespeed": 7
+    },
+    {
+      "name": "Dead",
+      "id": 6,
+      "file": "Butcher_BreakFree_dead_01.ani",
+      "loop": true,
+      "hold": true
+    },
+    {
+      "name": "CombatWound",
+      "id": 9,
+      "file": "Butcher_BreakFree_gethit_01.ani",
+      "loop": false
+    },
+    {
+      "name": "Stun",
+      "id": 14,
+      "file": "Butcher_stunned_01.ani",
+      "loop": true
+    },
+    {
+      "name": "AttackUnarmed",
+      "id": 16,
+      "file": "Butcher_BreakFree_attack_03.ani",
+      "loop": false
+    },
+    {
+      "name": "Attack1H",
+      "id": 17,
+      "file": "Butcher_BreakFree_attack_03.ani",
+      "loop": false
+    },
+    {
+      "name": "ReadyUnarmed",
+      "id": 25,
+      "file": "Butcher_BreakFree_idle_01.ani",
+      "loop": true
+    },
+    {
+      "name": "Ready1H",
+      "id": 26,
+      "file": "Butcher_BreakFree_idle_01.ani",
+      "loop": true
+    },
+    {
+      "name": "Birth",
+      "id": 127,
+      "file": "Butcher_BreakFree_intro_01.ani",
+      "loop": false
+    },
+    {
+      "name": "Spawn",
+      "id": 145,
+      "file": "Butcher_BreakFree_intro_01.ani",
+      "loop": false
+    }
+  ],
+  "model_path": "Creature/Custom/D3Butcher/D3Butcher.m2",
+  "texture_path": "Creature/Custom/D3Butcher/D3Butcher.blp",
+  "patch_name": "Butcher-assets.MPQ",
+  "material": {
+    "blend": "opaque",
+    "two_sided": true
+  }
+}

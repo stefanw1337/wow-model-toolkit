@@ -1,0 +1,215 @@
+{
+  "client": "C:/path/to/WoW-3.3.5a",
+  "locale": "enGB",
+  "patch_name": "patch-M.MPQ",
+  "groups": [
+    {
+      "name": "Wrath login screen",
+      "sound_ids": [
+        12765
+      ],
+      "tracks": [
+        {
+          "name": "MainTitle_D3_Ax_any_01 + MainTitle_D3_Ax_any_02 + MainTitle_D3_Ax_any_03 + MainTitle_D3_Ax_any_04 + MainTitle_D3_Ax_any_05 + MainTitle_D3_Ax_any_06",
+          "sources": [
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Actx_TitleCredits\\0003-MainTitle_D3_Ax_any_01.wav",
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Actx_TitleCredits\\0004-MainTitle_D3_Ax_any_02.wav",
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Actx_TitleCredits\\0005-MainTitle_D3_Ax_any_03.wav",
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Actx_TitleCredits\\0006-MainTitle_D3_Ax_any_04.wav",
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Actx_TitleCredits\\0007-MainTitle_D3_Ax_any_05.wav",
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Actx_TitleCredits\\0008-MainTitle_D3_Ax_any_06.wav"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Elwynn / Northshire and shared forest music",
+      "sound_ids": [
+        2523,
+        2533
+      ],
+      "tracks": [
+        {
+          "name": "Shire_D3_A1_ext_01",
+          "sources": [
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Act1_Shire\\0000-Shire_D3_A1_ext_01.wav"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Westfall and shared plains music",
+      "sound_ids": [
+        2528,
+        2538
+      ],
+      "tracks": [
+        {
+          "name": "FieldsMisery_D3_A1_any_01",
+          "sources": [
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Act1_FieldsMisery\\0004-FieldsMisery_D3_A1_any_01.wav"
+          ]
+        },
+        {
+          "name": "FieldsMisery_D3_A1_any_ 02",
+          "sources": [
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Act1_FieldsMisery\\0000-FieldsMisery_D3_A1_any_ 02.wav"
+          ]
+        },
+        {
+          "name": "FieldsMisery_D3_A1_any_ 03",
+          "sources": [
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Act1_FieldsMisery\\0001-FieldsMisery_D3_A1_any_ 03.wav"
+          ]
+        },
+        {
+          "name": "FieldsMisery_D3_A1_any_ 04 + FieldsMisery_D3_A1_any_ 05",
+          "sources": [
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Act1_FieldsMisery\\0002-FieldsMisery_D3_A1_any_ 04.wav",
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Act1_FieldsMisery\\0003-FieldsMisery_D3_A1_any_ 05.wav"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Duskwood and shared evil forest music",
+      "sound_ids": [
+        2524,
+        2534
+      ],
+      "tracks": [
+        {
+          "name": "FesteringWoods_D3_A1_any_01",
+          "sources": [
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Act1_FesteringWoods\\0001-FesteringWoods_D3_A1_any_01.wav"
+          ]
+        },
+        {
+          "name": "FesteringWoods_D3_A1_any_ 02",
+          "sources": [
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Act1_FesteringWoods\\0000-FesteringWoods_D3_A1_any_ 02.wav"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tanaris and shared desert music",
+      "sound_ids": [
+        4754,
+        4755
+      ],
+      "tracks": [
+        {
+          "name": "DesolateSands_D3_A2_EXT_01",
+          "sources": [
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Act2_DesolateSands\\0000-DesolateSands_D3_A2_EXT_01.wav"
+          ]
+        },
+        {
+          "name": "DesolateSands_D3_A2_EXT_02",
+          "sources": [
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Act2_DesolateSands\\0001-DesolateSands_D3_A2_EXT_02.wav"
+          ]
+        },
+        {
+          "name": "DesolateSands_D3_A2_EXT_03",
+          "sources": [
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Act2_DesolateSands\\0002-DesolateSands_D3_A2_EXT_03.wav"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stormwind, Ironforge, Darnassus, Orgrimmar, Thunder Bluff, Undercity, Silvermoon, Exodar, Shattrath and Dalaran",
+      "sound_ids": [
+        2532,
+        2541,
+        2901,
+        2902,
+        3402,
+        3900,
+        3920,
+        4434,
+        5035,
+        5036,
+        5054,
+        5055,
+        5074,
+        5294,
+        5334,
+        5354,
+        5474,
+        6080,
+        6081,
+        6146,
+        6734,
+        6794,
+        6837,
+        7076,
+        7077,
+        7196,
+        7318,
+        7319,
+        7338,
+        7414,
+        7519,
+        7794,
+        9793,
+        9794,
+        9801,
+        9971,
+        9972,
+        10608,
+        14844,
+        14906,
+        14907,
+        14908,
+        14909,
+        14964,
+        14995
+      ],
+      "tracks": [
+        {
+          "name": "Tristram_D3_A1_any_02",
+          "sources": [
+            "builds/d3-tristram-wav\\Base\\SoundBank\\Music_Act1_Ext\\0004-Tristram_D3_A1_any_02.wav"
+          ]
+        },
+        {
+          "name": "Tristram_D3_A1_any_03",
+          "sources": [
+            "builds/d3-tristram-wav\\Base\\SoundBank\\Music_Act1_Ext\\0003-Tristram_D3_A1_any_03.wav"
+          ]
+        },
+        {
+          "name": "Tristram",
+          "sources": [
+            "builds/d3-tristram-wav\\Base\\SoundBank\\Music_p43_D1\\0005-Tristram.wav"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Icecrown outdoor music",
+      "sound_ids": [
+        13801,
+        13802
+      ],
+      "tracks": [
+        {
+          "name": "FieldsOfSlaughter_D3_A3_ext_01",
+          "sources": [
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Act3_FieldsSlaughter\\0000-FieldsOfSlaughter_D3_A3_ext_01.wav"
+          ]
+        },
+        {
+          "name": "FieldsOfSlaughter_D3_A3_ext_02",
+          "sources": [
+            "builds/d3-music-wav\\Base\\SoundBank\\Music_Act3_FieldsSlaughter\\0001-FieldsOfSlaughter_D3_A3_ext_02.wav"
+          ]
+        }
+      ]
+    }
+  ],
+  "install_name": "patch-M.MPQ"
+}

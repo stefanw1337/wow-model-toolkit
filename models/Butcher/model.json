@@ -1,0 +1,175 @@
+{
+  "mode": "animated",
+  "source": "Butcher.blend",
+  "meshes": [
+    "A_normal_mat",
+    "A_armor_mat",
+    "A_cloth_mat"
+  ],
+  "armature": "Armature",
+  "fps": 30,
+  "reference_frame": 1,
+  "source_frame_offset": 0,
+  "frame_end_exclusive": false,
+  "rotation_z_degrees": 0,
+  "scale": 0.2,
+  "collision": {
+    "mode": "none"
+  },
+  "texture": "diffuse.png",
+  "model_path": "Creature/Custom/D3Butcher/D3Butcher.m2",
+  "texture_path": "Creature/Custom/D3Butcher/D3Butcher.blp",
+  "material": {
+    "blend": "opaque",
+    "two_sided": true
+  },
+  "patch_name": "Butcher-assets.MPQ",
+  "animations": [
+    {
+      "name": "Stand",
+      "id": 0,
+      "loop": true,
+      "ranges": [
+        [
+          1,
+          41
+        ]
+      ]
+    },
+    {
+      "name": "Death",
+      "id": 1,
+      "loop": false,
+      "ranges": [
+        [
+          44,
+          224
+        ]
+      ]
+    },
+    {
+      "name": "Walk",
+      "id": 4,
+      "loop": true,
+      "movespeed": 2.5,
+      "ranges": [
+        [
+          227,
+          277
+        ]
+      ]
+    },
+    {
+      "name": "Run",
+      "id": 5,
+      "loop": true,
+      "movespeed": 7,
+      "ranges": [
+        [
+          280,
+          310
+        ]
+      ]
+    },
+    {
+      "name": "Dead",
+      "id": 6,
+      "loop": true,
+      "hold": true,
+      "ranges": [
+        [
+          313,
+          314
+        ]
+      ]
+    },
+    {
+      "name": "CombatWound",
+      "id": 9,
+      "loop": false,
+      "ranges": [
+        [
+          317,
+          341
+        ]
+      ]
+    },
+    {
+      "name": "Stun",
+      "id": 14,
+      "loop": true,
+      "ranges": [
+        [
+          344,
+          440
+        ]
+      ]
+    },
+    {
+      "name": "AttackUnarmed",
+      "id": 16,
+      "loop": false,
+      "ranges": [
+        [
+          443,
+          497
+        ]
+      ]
+    },
+    {
+      "name": "Attack1H",
+      "id": 17,
+      "loop": false,
+      "ranges": [
+        [
+          443,
+          497
+        ]
+      ]
+    },
+    {
+      "name": "ReadyUnarmed",
+      "id": 25,
+      "loop": true,
+      "ranges": [
+        [
+          1,
+          41
+        ]
+      ]
+    },
+    {
+      "name": "Ready1H",
+      "id": 26,
+      "loop": true,
+      "ranges": [
+        [
+          1,
+          41
+        ]
+      ]
+    },
+    {
+      "name": "Birth",
+      "id": 127,
+      "loop": false,
+      "ranges": [
+        [
+          500,
+          610
+        ]
+      ]
+    },
+    {
+      "name": "Spawn",
+      "id": 145,
+      "loop": false,
+      "ranges": [
+        [
+          500,
+          610
+        ]
+      ]
+    }
+  ]
+}

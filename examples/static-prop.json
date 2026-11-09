@@ -1,0 +1,14 @@
+{
+  "mode": "static",
+  "source": "static-prop.obj",
+  "obj_forward_axis": "Y",
+  "obj_up_axis": "Z",
+  "rotation_z_degrees": 0,
+  "scale": 1.0,
+  "texture": "static-prop.ppm",
+  "model_path": "World/Custom/StaticProp/StaticProp.m2",
+  "texture_path": "World/Custom/StaticProp/StaticProp.blp",
+  "collision": {"mode": "none"},
+  "material": {"blend": "opaque"},
+  "patch_name": "patch-P.MPQ"
+}

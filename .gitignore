@@ -1,0 +1,24 @@
+builds/
+__pycache__/
+*.pyc
+*.MPQ
+*.mpq
+*.blend
+*.blend1
+models/*/diffuse.png
+login/*.png
+previews/
+ui/D3UI/
+ui/intermediate/
+ui/previews/
+ui/layout.json
+# Machine-specific build reports and handoff notes stay local
+AI_INSTRUCTIONS.md
+VERIFICATION.json
+music/
+northshire-combined/
+login/
+models/*/import-report.json
+ui/conversion-report.json
+ui/lua-smoke-test.json
+tools/*.exe

@@ -1,0 +1,113 @@
+{
+  "name": "Diablo",
+  "data_root": "C:/path/to/Diablo III/Data/data/Work/Base",
+  "appearance": "Diablo.app",
+  "scale": 0.16,
+  "rotation_z_degrees": 0,
+  "meshes": [
+    {
+      "mesh": "A_normal_mat",
+      "texture": "Diablo_diff.tex"
+    }
+  ],
+  "animations": [
+    {
+      "name": "Stand",
+      "id": 0,
+      "file": "Diablo_idle_01.ani",
+      "loop": true
+    },
+    {
+      "name": "Death",
+      "id": 1,
+      "file": "Diablo_Death.ani",
+      "loop": false,
+      "ground_clamp_z": -0.03,
+      "root_rotation_y_degrees": [
+        0,
+        -35
+      ]
+    },
+    {
+      "name": "Walk",
+      "id": 4,
+      "file": "Diablo_Walk.ani",
+      "loop": true,
+      "movespeed": 2.5
+    },
+    {
+      "name": "Run",
+      "id": 5,
+      "file": "Diablo_Run.ani",
+      "loop": true,
+      "movespeed": 7
+    },
+    {
+      "name": "Dead",
+      "id": 6,
+      "file": "Diablo_Dead.ani",
+      "loop": true,
+      "hold": true,
+      "ground_clamp_z": -0.03,
+      "root_rotation_y_degrees": -35
+    },
+    {
+      "name": "CombatWound",
+      "id": 9,
+      "file": "Diablo_Gethit.ani",
+      "loop": false
+    },
+    {
+      "name": "Stun",
+      "id": 14,
+      "file": "Diablo_stunned.ani",
+      "loop": true
+    },
+    {
+      "name": "AttackUnarmed",
+      "id": 16,
+      "file": "Diablo_Attack_01.ani",
+      "loop": false
+    },
+    {
+      "name": "Attack1H",
+      "id": 17,
+      "file": "Diablo_Attack_01.ani",
+      "loop": false
+    },
+    {
+      "name": "ReadyUnarmed",
+      "id": 25,
+      "file": "Diablo_idle_01.ani",
+      "loop": true
+    },
+    {
+      "name": "Ready1H",
+      "id": 26,
+      "file": "Diablo_idle_01.ani",
+      "loop": true
+    },
+    {
+      "name": "EmoteTalk",
+      "id": 60,
+      "file": "Diablo_talk.ani",
+      "loop": false
+    }
+  ],
+  "model_path": "Creature/Custom/D3Diablo/D3Diablo.m2",
+  "texture_path": "Creature/Custom/D3Diablo/D3Diablo.blp",
+  "patch_name": "Diablo-assets.MPQ",
+  "material": {
+    "blend": "opaque",
+    "two_sided": true
+  },
+  "animation_transitions": [
+    {
+      "id": 1,
+      "from_id": 1,
+      "to_id": 6,
+      "duration_ms": 1800,
+      "ground_z": -0.03
+    }
+  ]
+}
