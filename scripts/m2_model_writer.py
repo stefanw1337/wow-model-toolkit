@@ -84,6 +84,12 @@ def write(scene, path):
     b.array(60, '3f4B4B3f4f', [(*v['position'], *v['weights'], *v['bones'], *v['normal'], *v['uv'], 0., 0.)
                                 for v in vertices])
     b.put(68, 'I', 1)
+    colors = scene.get('colors', [])
+    color_offset = b.add(bytes(40 * len(colors))) if colors else 0
+    b.put(72, 'II', len(colors), color_offset)
+    for i, color in enumerate(colors):
+        channel_track(b, color_offset + i * 40, color['color'], '3f', n)
+        channel_track(b, color_offset + i * 40 + 20, color['alpha'], 'h', n)
 
     texture_rows = []
     for t in textures:
@@ -137,7 +143,8 @@ def write(scene, path):
         section_rows.append((group.get('geoset', 0), vertex_start, len(vertex_map), face_start,
                              len(skin_faces) - face_start, len(bone_list), palette_start, influences, 0,
                              *center, *center, radius))
-        batches.append((group.get('batch_flags', 16), group.get('shader', 0), si, si, -1, group['material'], 0, 1,
+        batches.append((group.get('batch_flags', 16), group.get('shader', 0), si, si, group.get('color', -1),
+                        group['material'], 0, 1,
                         group['texture'], 0, 0, 0))
     require(len(skin_faces) <= 65535 * 3 and len(skin_indices) <= 65535, 'SKIN index limit exceeded')
     b.array(120, 'H', [(i,) for i in palette])
@@ -159,6 +166,33 @@ def write(scene, path):
         constant_track(b, o + 20, 'B', (1,), n)
     ids = [(a['id'], i) for i, a in enumerate(attachments)]
     b.array(248, 'h', [(x,) for x in lookup_table(ids, max([k for k, _ in ids], default=-1) + 1)])
+
+    events = scene.get('events', [])
+    event_offset = b.add(bytes(36 * len(events))) if events else 0
+    b.put(256, 'II', len(events), event_offset)
+    for i, event in enumerate(events):
+        o = event_offset + i * 36
+        b.put(o, '4sII3f', event['identifier'], event.get('data', 0), event['bone'], *event['position'])
+        timelines = event['times']
+        require(len(timelines) == n, 'Event sequence count mismatch')
+        pairs = [(len(t), b.add(S.pack(f'<{len(t)}I', *t)) if t else 0) for t in timelines]
+        b.put(o + 24, 'HhII', 0, -1, len(pairs), b.add(b''.join(S.pack('<II', *pair) for pair in pairs)))
+
+    cameras = scene.get('cameras', [])
+    camera_offset = b.add(bytes(100 * len(cameras))) if cameras else 0
+    b.put(272, 'II', len(cameras), camera_offset)
+    for i, camera in enumerate(cameras):
+        o = camera_offset + i * 100
+        b.put(o, 'I3f', camera['type'], camera['fov'], camera['far'], camera['near'])
+        for at, floats in ((16, 9), (48, 9), (80, 3)):
+            times = b.add(S.pack('<II', 1, b.add(S.pack('<I', 0))))
+            values = b.add(S.pack('<II', 1, b.add(bytes(4 * floats))))
+            b.put(o + at, 'HhIIII', 0, -1, 1, times, 1, values)
+        b.put(o + 36, '3f', *camera['position'])
+        b.put(o + 68, '3f', *camera['target'])
+    camera_ids = [(camera['type'], i) for i, camera in enumerate(cameras)]
+    if camera_ids:
+        b.array(280, 'h', [(x,) for x in lookup_table(camera_ids, max(k for k, _ in camera_ids) + 1)])
 
     skin = Buffer(48)
     skin.put(0, '4s', b'SKIN')
