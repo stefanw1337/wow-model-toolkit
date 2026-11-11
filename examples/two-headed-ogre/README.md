@@ -12,7 +12,8 @@ python scripts/two_headed_ogre/build.py <out> --hots <hots folder> --wod <chogal
 - `--hots`: `storm_hero_chogall_base.m3`, `storm_hero_chogall_requiredanims.m3a` and
   `storm_hero_chogall_base_diff.dds` from Heroes of the Storm (CascExtractor: filter `storm_hero_chogall_`).
 - `--wod`: `chogall.m2`, `chogall00.skin` and his `.anim`, `chogalltop.blp`, `chogallbottom.blp` from WoW
-  (`creature/chogall/`).
+  (`creature/chogall/`), from a WoD 6.x client or retail (CascExtractor `--source online:wow:eu`). Retail wraps the
+  same model in an MD21 chunk; both give identical output.
 - `tuning.json`: the hand-made parts (loincloth weights, baked hair swing, weapon and attachment points, blend
   times). It contains no mesh or texture data.
 

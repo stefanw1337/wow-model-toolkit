@@ -12,6 +12,8 @@ class M2:
     def __init__(self, path):
         self.path = Path(path)
         self.data = self.path.read_bytes()
+        if self.data[:4] == b'MD21':
+            self.data = self.data[8:8 + S.unpack_from('<I', self.data, 4)[0]]
         magic, self.version = S.unpack_from('<4sI', self.data, 0)
         if magic != b'MD20' or self.version not in (264, 272):
             raise ValueError(f'Unsupported M2 {magic} {self.version}')
