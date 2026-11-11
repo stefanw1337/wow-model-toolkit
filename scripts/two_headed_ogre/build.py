@@ -11,7 +11,7 @@ import numpy as np
 HERE = Path(__file__).resolve().parent
 sys.path[:0] = [str(HERE), str(HERE.parent)]
 
-import assets  # noqa: E402
+import blp  # noqa: E402
 import carry_anims  # noqa: E402
 import fit_body  # noqa: E402
 import hots_anim  # noqa: E402
@@ -456,7 +456,7 @@ def main(out, hots, wod, tuning=TUNING):
     print(write(fit, ogre / 'TwoHeadedOgreMale.m2'))
     held, pointing = held_item_body(fit, 'TwoHeadedOgreMaleHeld')
     print('held items point', pointing, write(held, ogre / 'TwoHeadedOgreMaleHeld.m2'))
-    assets.texture(hots / HOTS_DIFFUSE, ogre / 'TwoHeadedOgreMale.blp', 'opaque')
+    blp.texture(hots / HOTS_DIFFUSE, ogre / 'TwoHeadedOgreMale.blp', 'opaque')
     hips_closer(wow)
     from carry_anims import copy_carry_sequences
     print('carry sequences on the WoW Cho\'Gall', copy_carry_sequences(fit, wow))
